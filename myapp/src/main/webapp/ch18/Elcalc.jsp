@@ -10,10 +10,10 @@
 <form action="Elcalc.jsp" method="post">
 <input type="text" name="exp1" size=5 value="${param.exp1}">
 <select name="exp2">
-<option value ="+"> + </option>
-<option value ="-"> - </option>
-<option value ="/"> / </option>
-<option value ="*"> * </option>
+<option value ="+" ${param.exp2=="+" ? "selected":""}> + </option> <!-- selected와 삼항연산자를 사용해서 연산자 남아있게 하기 -->
+<option value ="-" ${param.exp2=="-" ? "selected":""}> - </option>
+<option value ="/" ${param.exp2=="/" ? "selected":""}> / </option>
+<option value ="*" ${param.exp2=="*" ? "selected":""}> * </option>
 </select>
 <input type="text" name="exp3" size=5 value="${param.exp3}">
  =
