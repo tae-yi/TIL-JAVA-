@@ -9,7 +9,7 @@ request.setAttribute("siteName", "JSPstudy.co.kr");
 </head>
 <body>
 <h2>EL의 기본 문법</h2>
-사이트명 : <b>${siteName}</b><br>
+사이트명 : <b>${siteName}</b><br><!-- el표현문법: ${} -->
 
 <%=request.getHeader("host")%><br>
 <%=request.getHeader("User-Agent")%>
