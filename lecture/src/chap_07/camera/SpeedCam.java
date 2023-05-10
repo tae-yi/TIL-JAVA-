@@ -1,20 +1,17 @@
 package chap_07.camera;
 
-public class SpeedCam {
-    public String name;
+public class SpeedCam extends Camera { // 자식 클래스
 
     public SpeedCam() {
-        this.name = "과속단속 카메라";
+        // this.name = "과속단속 카메라";
+        super("과속단속 카메라");
     }
 
     public void takePicture() {
-        // 사진 촬영
-        System.out.println("사진을 촬영합니다.");
-    }
+        super.takePicture();
+        checkSpeed();
+        recognizeLicencePlate();
 
-    public void recordVideo() {
-        // 동영상 녹화
-        System.out.println("동영상을 녹화합니다.");
     }
 
     public void checkSpeed() {
@@ -24,5 +21,10 @@ public class SpeedCam {
     public void recognizeLicencePlate() {
         // 번호판 인식
         System.out.println("차량 번호를 인식합니다.");
+    }
+
+    @Override // annotation : 주석
+    public void showMainFeature() {
+        System.out.println(this.name + "의 주요기능 : 속도 측정, 번호 인식");
     }
 }
